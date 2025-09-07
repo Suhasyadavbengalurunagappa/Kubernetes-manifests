@@ -31,7 +31,7 @@ jobs:
 
     # 4. Update kubeconfig to access EKS
     - name: Update kubeconfig
-      run: aws eks update-kubeconfig --name <your-eks-cluster-name> --region eu-north-1
+      run: aws eks update-kubeconfig --name dev-eks --region eu-north-1
 
     # 5. Create ECR pull secret (if not exists)
     - name: Create ECR secret
