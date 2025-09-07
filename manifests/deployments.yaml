@@ -23,6 +23,13 @@ spec:
         image: 922718141448.dkr.ecr.eu-north-1.amazonaws.com/appointment-service:latest
         ports:
         - containerPort: 3001
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
 ---
 # Patient Service Deployment
 apiVersion: apps/v1
@@ -48,3 +55,10 @@ spec:
         image: 922718141448.dkr.ecr.eu-north-1.amazonaws.com/patient-service:latest
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
